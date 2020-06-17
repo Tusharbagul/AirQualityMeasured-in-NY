@@ -24,7 +24,7 @@ pred
 newdata<-data.frame(emp,pred,"Error"= emp$Churn_out_rate - pred)
 newdata
 
-#Transforming input exponentially
+#Transforming input using square function
 model2 <- lm(Churn_out_rate~Salary_hike + I(Salary_hike^2), data=emp)
 summary(model2)
 
